@@ -9,26 +9,78 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <h1>CrystalsCollector!</h1>
+    <header id="header">
+        <h1 id="game-name">CrystalsCollector</h1>
+        <h2 id="game-slogan">Find the secret of the stones!</h2>
+    </header>
+
     <br>
-    <p>Instructions:</p>
+
+    <div id="random-num-text" class="text">Match this number:</div>
+    <div id="random-num" class="numbers">Random Number between 19 and 120</div>
     <br>
-    <div id="random-num">Random Number between 19 and 120</div>
-    <br>
-    <img id="crystal1" src="assets/images/diamond.png" height="100">
-    <img id="crystal2" src="assets/images/hexagon.png" height="100">
-    <img id="crystal3" src="assets/images/octagon.png" height="100">
-    <img id="crystal4" src="assets/images/round.png" height="100">
-    <div>
-        <p id="announcement">Announcement</p>
-        <p id="wins">Wins: 0</p>
-        <p id="losses">Losses: 0</p>
+    <div class="text" id="crystal-sum-text">Your current total is:</div>
+    <div class="text" id="crystal-sum">0</div>
+
+    <div class="crystals">
+
+        <div>
+            <p class="text score-labels">Wins:
+                <p id="wins" class="numbers">0</p>
+            </p>
+        </div>
+        <div>
+            <img id="crystal1" src="assets/images/diamond.png" height="100">
+        </div>
+        <div>
+            <img id="crystal2" src="assets/images/hexagon.png" height="100">
+        </div>
+        <div>
+            <img id="crystal3" src="assets/images/octagon.png" height="100">
+        </div>
+        <div>
+            <img id="crystal4" src="assets/images/round.png" height="100">
+        </div>
+        <div>
+            <p class="text score-labels">Losses:
+                    <p id="losses" class="numbers">0</p>
+            </p>
+        </div>
     </div>
+
+        
+    <div>
+        <p class="text" id="announcement">Will you win or will you lose?</p>
+    </div>
+    
     <br>
-    <div id="crystal-sum">Your current total is: 0</div>
+
+        <p class="instructions text" id="instr-heading">Instructions:</p>
+        <br>
+        <p class="instructions text">You will be given a random number at the start of the game.</p>
+        <br>
+        <p class="instructions text">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <br>
+        <p class="instructions text">You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+        <br>
+        <p class="instructions text">The value of each crystal is hidden from you until you click on it.</p>
+        <br>
+        <p class="instructions text">Each time when the game starts, the game will change the values of each crystal.</p>
+
+
+
+    <br>
+    
+
 </body>
 </html>

@@ -10,9 +10,14 @@ var userWins = 0;
 var userLosses = 0;
 var randNum;
 
+// Generate an alert with instructions to the game
+// setTimeout(function() {
+//     alert("\nINSTRUCTIONS:\n\nYou will be given a random number at the start of the game.\n\nThere are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.\n\nYou win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.\n\nThe value of each crystal is hidden from you until you click on it.\nEach time when the game starts, the game will change the values of each crystal.");
+// }, 1000);
 
 $(document).ready(function(){
-
+    
+    
     // Generate random number between 19 and 120
 
     // Math.floor(Math.random() * (max - min + 1)) + min;
@@ -78,7 +83,7 @@ $(document).ready(function(){
             if (crystalSum < randNum) { // Prevent addition overrun after a win/loss has been achieved
                 crystalSum = crystalSum + crystal1;
                 console.log("crystalSum :" + crystalSum);
-                $( "#crystal-sum" ).html("Your current total is: " + crystalSum);
+                $( "#crystal-sum" ).html(crystalSum);
             } else {
                 return;
             }
@@ -89,7 +94,7 @@ $(document).ready(function(){
             if (crystalSum < randNum) {
                 crystalSum = crystalSum + crystal2;
                 console.log("crystalSum :" + crystalSum);
-                $( "#crystal-sum" ).html("Your current total is: " + crystalSum);
+                $( "#crystal-sum" ).html(crystalSum);
             } else {
                 return;
             }
@@ -100,7 +105,7 @@ $(document).ready(function(){
             if (crystalSum < randNum) {
                 crystalSum = crystalSum + crystal3;
                 console.log("crystalSum :" + crystalSum);
-                $( "#crystal-sum" ).html("Your current total is: " + crystalSum);
+                $( "#crystal-sum" ).html(crystalSum);
             } else {
                 return;
             }
@@ -111,7 +116,7 @@ $(document).ready(function(){
             if (crystalSum < randNum) {
                 crystalSum = crystalSum + crystal4;
                 console.log("crystalSum :" + crystalSum);
-                $( "#crystal-sum" ).html("Your current total is: " + crystalSum);
+                $( "#crystal-sum" ).html(crystalSum);
             } else {
                 return;
             }
@@ -128,12 +133,12 @@ $(document).ready(function(){
             delayReset = setTimeout(function() {
                 userLosses = userLosses + 1;
                 console.log("userLosses :" + userLosses);
-                $( "#losses" ).html("Losses: " + userLosses);
+                $( "#losses" ).html(userLosses);
                 $("#announcement").html("You lost!");
                 alert("Sorry, you lose!");
                 delayReset = setTimeout(function() {
                     crystalSum = 0;
-                    $( "#crystal-sum" ).html("Your current total is: " + crystalSum);
+                    $( "#crystal-sum" ).html(crystalSum);
                 }, 1000);
                 randNumFunc();
                 crystalRandGen();
@@ -148,9 +153,9 @@ $(document).ready(function(){
                 alert("You won!");
                 delayReset = setTimeout(function() { // Delay erasure of total score at victory or defeat for 1 sec.
                     crystalSum = 0;
-                    $( "#crystal-sum" ).html("Your current total is: " + crystalSum);
+                    $( "#crystal-sum" ).html(crystalSum);
                 }, 1000);
-                $( "#wins" ).html("Wins: " + userWins);
+                $( "#wins" ).html(userWins);
                 randNumFunc();
                 crystalRandGen();
             }, 500);
