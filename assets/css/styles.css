@@ -116,6 +116,7 @@ body {
 #announcement {
     display: flex;
     text-shadow:5px 5px 5px rgb(39, 33, 33);
+    margin-top: .25em;
 }
 
 .instructions {
@@ -128,4 +129,9 @@ body {
     font-size: 1.25em;
     text-shadow:5px 5px 5px rgb(39, 33, 33);
 
+}
+
+#footer {
+    margin-top: 1em;
+    text-shadow:5px 5px 5px rgb(39, 33, 33);
 }

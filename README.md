@@ -14,5 +14,5 @@ https://vk.com/cg_ardz?z=photo-99707911_421412309/wall-99707911_1003 - zabor.jpg
 
 https://www.artstation.com/artwork/vxW3D - winding green
 
-<a href='https://www.freepik.com/free-vector/pack-of-six-colored-gemstones_1093484.htm'>Designed by Freepik</a>
+<a href='https://www.freepik.com/free-vector/pack-of-six-colored-gemstones_1093484.htm'>Crystals Designed by Freepik</a>
 
