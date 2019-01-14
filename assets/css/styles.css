@@ -72,10 +72,41 @@ body {
 
 }
 
+#crystal1:hover {
+    display: flex;
+    content: url("../images/red-light.png");
+}
+#crystal2:hover {
+    display: flex;
+    content: url("../images/green-light.png");
+}
+#crystal3:hover {
+    display: flex;
+    content: url("../images/purple-light.png");
+}
+#crystal4:hover {
+    display: flex;
+    content: url("../images/yellow-light.png");
+}
+
+
 .crystals {
     display: flex;
     flex-direction: row;
 }
+
+.crystals {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 .1em .25em 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: fit-content; */
+    margin-top: 1em;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .crystals:hover {
+    box-shadow: 0 .5em 1.5em 0 rgba(0,0,0,0.2);
+  }
 
 .score-labels {
     text-align: center;
