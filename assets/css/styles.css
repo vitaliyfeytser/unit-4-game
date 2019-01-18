@@ -1,4 +1,4 @@
-/* STYLES ZERO-OUT */
+STYLES ZERO-OUT
 
 * {
     box-sizing: border-box;
@@ -18,15 +18,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-image: url("../images/light-grey-terrazzo.png"); */
+    background-color: black;
     background-repeat: no-repeat;
     background-image: url("../images/dream-forest.png");
-    background-size: 100em;
+    background-size: 100%;
 }
 
-#header {
-    flex-direction: column;
-    align-items: center;
+
+#header-box {
+    flex-direction: column wrap;
+    justify-content: center;
+    text-align: center;
     color: beige;
 }
 
@@ -35,17 +37,30 @@ body {
     color: beige;
 }
 
+.small-text {
+    font-family: 'Indie Flower', cursive;
+    color: beige;
+    font-size: 1em;
+    text-shadow: .25em  .25em  .25em rgb(39, 33, 33);
+}
+
 #game-name {
     font-size: 5em;
-    text-shadow:10px 10px 10px rgb(39, 33, 33);
+    text-shadow: .1em .1em .1em rgb(39, 33, 33);
 }
 
 #game-slogan {
     font-size: 3em;
     font-family: 'Indie Flower', cursive;
     margin-bottom: 1em;
-    text-shadow:5px 5px 5px rgb(39, 33, 33);
+    text-shadow: .1em .1em .1em rgb(39, 33, 33);
 
+}
+
+#game-box {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
 }
 
 .numbers {
@@ -55,7 +70,7 @@ body {
     text-align: center;
     margin-left: 1em;
     margin-right: 1em;
-    text-shadow:5px 5px 5px rgb(39, 33, 33);
+    text-shadow: .1em  .1em  .1em rgb(39, 33, 33);
 }
 
 #random-num {
@@ -72,30 +87,33 @@ body {
 
 }
 
+#crystal1 { background: url(../images/red-light.png) no-repeat -9999px -9999px; }
 #crystal1:hover {
-    display: flex;
+    /* display: flex; */
     content: url("../images/red-light.png");
 }
+#crystal2 { background: url(../images/green-light.png) no-repeat -9999px -9999px; }
 #crystal2:hover {
-    display: flex;
+    /* display: flex; */
     content: url("../images/green-light.png");
 }
+#crystal3 { background: url(../images/purple-light.png) no-repeat -9999px -9999px; }
 #crystal3:hover {
-    display: flex;
+    /* display: flex; */
     content: url("../images/purple-light.png");
 }
+
+#crystal4 { background: url(../images/yellow-light.png) no-repeat -9999px -9999px; }
 #crystal4:hover {
-    display: flex;
+    /* display: flex; */
     content: url("../images/yellow-light.png");
 }
 
-
-.crystals {
+.crystals-box {
     display: flex;
-    flex-direction: row;
-}
-
-.crystals {
+    flex-direction: row wrap;
+    justify-content: center;
+    /* width: fit-content; */
     /* Add shadows to create the "card" effect */
     box-shadow: 0 .1em .25em 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -104,26 +122,50 @@ body {
   }
   
   /* On mouse-over, add a deeper shadow */
-  .crystals:hover {
+.crystals-box:hover {
     box-shadow: 0 .5em 1.5em 0 rgba(0,0,0,0.2);
+    
   }
 
 .score-labels {
     text-align: center;
-    text-shadow:5px 5px 5px rgb(39, 33, 33);
+}
+
+#all-crystals {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.crystal-pair {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.crystal {
+    /* display: flex;
+    align-content: center; */
+    height: 5em;
+
 }
 
 #announcement {
-    display: flex;
-    text-shadow:5px 5px 5px rgb(39, 33, 33);
     margin-top: .25em;
 }
 
-.instructions {
+
+.instructions-box {
     display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    text-align: left;
+}
+
+.instructions {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-content: flex-start; */
+    /* text-align: center; */
+    padding: .5em;
+
     color: beige;
     font-family: 'Indie Flower', cursive;
     font-size: 1.25em;
@@ -131,7 +173,112 @@ body {
 
 }
 
-#footer {
+#instr-heading {
     margin-top: 1em;
+    text-align: start;
+}
+
+#footer {
     text-shadow:5px 5px 5px rgb(39, 33, 33);
+    
+}
+
+#footer-box {
+    margin-top: 1em;
+    flex-flow: row wrap;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+
+/* ------------ MEDIA QUERIES -------------- */
+
+/* ---- 904 PX ---- */
+@media screen and (max-width: 904px) {
+    #game-name {
+        font-size: 4em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    }
+    
+    #game-slogan {
+        font-size: 2.25em;
+        font-family: 'Indie Flower', cursive;
+        margin-bottom: 1em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    
+    }
+
+
+}
+
+/* ---- 600 PX ---- */
+@media screen and (max-width: 600px) {
+    #game-name {
+        font-size: 3em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    }
+    
+    #game-slogan {
+        font-size: 1.75em;
+        font-family: 'Indie Flower', cursive;
+        margin-bottom: 1em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    
+    }
+    
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 0px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) { 
+
+    #game-name {
+        font-size: 3em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    }
+    
+    #game-slogan {
+        font-size: 1.75em;
+        font-family: 'Indie Flower', cursive;
+        margin-bottom: 1em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    
+    }
+
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 0px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
+
+    #game-name {
+        font-size: 4em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    }
+    
+    #game-slogan {
+        font-size: 2.25em;
+        font-family: 'Indie Flower', cursive;
+        margin-bottom: 1em;
+        text-shadow: .1em .1em .1em rgb(39, 33, 33);
+    
+    }
+
 }
